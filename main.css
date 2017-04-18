@@ -1,0 +1,35 @@
+.container{
+	margin: auto;
+	margin-top: 8%;
+	margin-bottom: 8%; 
+	position: relative;
+	text-align: center;
+	width: 60%;
+}
+
+.name{
+	text-align: left;
+	height: 80px;
+	padding-left: 15px;
+}
+
+.logo{
+	height: 50px;
+	width: 60px;
+	display: block;
+	float: left;	
+}
+
+.logo img{
+	display: block;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.status{
+	height: 80px;
+}
+
+.offline{
+	display: block;
+}
