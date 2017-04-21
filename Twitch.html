@@ -3,6 +3,7 @@
 <head>
 	<title>Twitch.tv JSON API</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
@@ -25,14 +26,14 @@
 	<div class="container">
 
 		<div class="header">
-			<div class="col-sm-8">TWITCH.TV STREAMERS</div>
+			<div class="col-sm-8 col-xs-4 heading">TWITCH.TV STREAMERS</div>
 		
-			<div class="col-sm-4 switch">
+			<div class="col-sm-4 col-xs-1 switch">
 				<ul>
-					<li id="all">ALL</li>
-					<li id="online">Online</li>
-					<li id="offline">Offline</li>
-					<li id="invalid">Invalid</li>
+					<li id="all" class="active"><div><a href="#">ALL</a></div></li>
+					<li id="online"><div><a href="#">Online</a></div></li>
+					<li id="offline"><div><a href="#">Offline</a></div></li>
+					<li id="invalid"><div><a href="#">Invalid</a></div></li>
 				</ul>
 
 			</div>

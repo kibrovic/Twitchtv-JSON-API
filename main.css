@@ -1,35 +1,128 @@
+body{
+	background: linear-gradient(to bottom, #2A2A2A, #908E8E);
+	background-attachment: fixed;
+	height: 100%;
+}
+
+
 .container{
 	margin: auto;
-	margin-top: 8%;
-	margin-bottom: 8%; 
-	position: relative;
+	margin-top: 2%;
+	margin-bottom: 5%;
 	text-align: center;
-	width: 60%;
+	width: 70%;
+	font-size: 3vmin;
+}
+
+.header{
+	margin-top: 1%;
+	color: #FFF;
+	background: #6E6E63;
+	overflow: auto;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.heading{
+	display: block;
+	float: left;
+	height: 100%;
+	max-width: 55%;
+}
+
+.switch{
+	display: block;
+	float: right;
+	max-width: 40%;
+	height: 100%;
+}
+
+.content{
+	display: block;
+	margin-bottom: 2%;
+	width: 100%;
+	color: red;
 }
 
 .name{
-	text-align: left;
-	height: 80px;
-	padding-left: 15px;
+	display: inline-block;
+	width: 55%;
+	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 3em;
 }
 
+
 .logo{
-	height: 50px;
-	width: 60px;
 	display: block;
-	float: left;	
+	float: left;
+	height: 100%;
+	width: 15%;
 }
 
 .logo img{
-	display: block;
-	max-width: 50px;
-	max-height: 50px;
+	max-width: 90%;
+	max-height: 90%;
 }
 
 .status{
-	height: 80px;
+	display: inline-block;
+	width: 40%;
+	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 3em;
 }
 
-.offline{
+
+.box{
 	display: block;
+	background: #858E94;
+	height: 3em;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 2px;
+	padding-bottom: 2px;
+	text-overflow: ellipsis;
+	color: #FFF;
+}
+
+.box a{
+	color: #FFF;
+}
+
+.box a:hover{
+	color: #6E6E63;
+}
+
+li.active{
+	color: #858E94;
+	background: #9CA7AD;
+}
+
+
+a:active, a:focus{
+	text-decoration: none;
+	color: #FFF;
+}
+
+ul a:hover{
+	text-decoration: none;
+	color: #9CA7AD;
+}
+
+ul{
+	padding-top: 10px;
+	padding-left: 0;
+	display: block;
+	float: right;
+	height: 100%;
+	color: #FFF;
+}
+
+ul a:visited{
+	text-decoration: none;
+	color: #FFF;
 }

@@ -9,9 +9,9 @@ $(document).ready(function(){
 			dataType: 'jsonp',
 			success: function(data){
 				if (data.display_name===undefined){
-					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='invalid'><div class='col-sm-6 name'><div class='logo'><img src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg'></div>"+ name +"</div>"+ "<div class='col-sm-6 status'>Channel does not exist</div></div> <br>  <br>");
+					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='invalid box'><div class='col-sm-6 col-xs-6 name'><div class='logo'><img src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg'></div>"+ name +"</div>"+ "<div class='col-sm-6 col-xs-6 status'>Channel does not exist</div></div>");
 				} else {
-					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='offline'><a href='https://www.twitch.tv/"+name+"' target='_blank'><div class='col-sm-6 name'><div class='logo'><img src='"+data.logo+"' alt='Image not found'onerror=\"this.onerror=null;this.src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg';\" /> </div>"+data.display_name +"</div></a>"+ "<div class='col-sm-6 status'>Offline</div></div> <br>  <br>");
+					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='offline box'><a href='https://www.twitch.tv/"+name+"' target='_blank'><div class='col-sm-6 col-xs-6 name'><div class='logo'><img src='"+data.logo+"' alt='Image not found'onerror=\"this.onerror=null;this.src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg';\" /> </div>"+data.display_name +"</div></a><div class='col-sm-6 col-xs-6 status'>Offline</div></div>");
 				} //end if
 			} 
 		}); //end ajax
@@ -27,7 +27,7 @@ $(document).ready(function(){
 				if (data.stream===null){
 					getChannels(name);
 				} else {
-					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='online'><a href='https://www.twitch.tv/"+name+"' target='_blank'><div class='col-sm-6 name'> ONLINE <div class='logo'><img src='"+data.stream.channel.logo+"' alt='Image not found'onerror=\"this.onerror=null;this.src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg';\" /></div> "+data.stream.channel.display_name +"</div></a>" + "<div class='col-sm-6 status'>"+data.stream.channel.game+" "+data.stream.channel.status+"</div></div> <br> <br>");							
+					document.querySelector(".content").insertAdjacentHTML('beforeend', "<div class='online box'><a href='https://www.twitch.tv/"+name+"' target='_blank'><div class='col-sm-6 col-xs-6 name'><div class='logo'><img src='"+data.stream.channel.logo+"' alt='Image not found'onerror=\"this.onerror=null;this.src='https://ecuador.travel/wp-content/uploads/2015/10/NoImage_592x444.jpg';\" /></div> "+data.stream.channel.display_name +"</div></a>" + "<div class='col-sm-6 col-xs-6 status'>"+data.stream.channel.game+" "+data.stream.channel.status+"</div></div>");							
 				}	//end if else			
 			}
 		}); //end ajax
@@ -43,11 +43,12 @@ $(document).ready(function(){
 	
 	
 	$("li").click(function(){
+		$("li").removeClass("active");
 		var myId=$(this).attr("id");
 		var offlines = document.getElementsByClassName('offline');
 		var invalids = document.getElementsByClassName('invalid');
 		var onlines = document.getElementsByClassName('online');
-		$(this).css("color", "red");
+		$(this).addClass("active");
 
 		switch (myId){
 			case 'all':
